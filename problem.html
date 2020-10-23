@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PROBLEM | SOLVING</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div style="height:100vh" class="bg-secondary d-flex flex-row align-items-center">
+
+        <div class="container jumbotron w-100">
+            <h1 class="text-center mb-5 text-info">Input Text Contain Hate Word Or Not</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <input onkeyup="handleHateSpeech()" class="form-control" type="text" id="inputData" />
+                </div>
+                <div class="col-md-6">
+                    <p id="text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleHateSpeech() {
+            let hateSpeech = ['force', 'rough', 'crash', 'attack', 'rush', 'brust']
+            let userText = document.getElementById('inputData').value         
+            document.getElementById("text").innerHTML = userText
+            let userTextWord = userText.split(' ')
+            for (const userWord of userTextWord) {
+                for (const hateWord of hateSpeech) {
+                    if (userWord === hateWord) {
+                        alert(`ERROR! ${hateWord} is a hate Word...`)
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
