@@ -33,7 +33,6 @@
             hateSpeech.map(hateWord=>{
                 if(userWord.includes(hateword)){alert(`ERROR! ${hateWord} is a hate Word...`)}
             })    
-
         }
     </script>
 </body>
